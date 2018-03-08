@@ -23,13 +23,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ENV GPG_KEY 97FC712E4C024BBEA48A61ED3A5CA953F73C700D
 ENV PYTHON_VERSION 3.5.2
 
-# manually adding jessie dependencies
+# manually adding jessie dependencies + some other usefull stuff
 RUN set -ex; \
     apt-get update; \
     apt-get install -y --no-install-recommends \
         autoconf \
         automake \
         bzip2 \
+        ca-certificates \
         dpkg-dev \
         file \
         g++ \
